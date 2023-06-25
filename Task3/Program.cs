@@ -18,7 +18,6 @@ void FillArray(double[] array)
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Math.Round((rnd.NextDouble() * 100), 2);
-        // array[i + 1] = Math.Round((rnd.NextDouble() * 10), 2);
     }
 }
 
