@@ -17,7 +17,7 @@ void FillArray(double[] array)
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Math.Round((rnd.NextDouble() * 100), 2);
+        array[i] = Math.Round((rnd.NextDouble() * 100 - 60), 2);
     }
 }
 
@@ -36,7 +36,7 @@ double MaxNum(double[] array)
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] > array[posMax])
-            array[posMax] = array[i]; 
+            array[posMax] = array[i];
     }
     return array[posMax];
 }
@@ -47,7 +47,7 @@ double MinNum(double[] array)
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] < array[posMin])
-            array[posMin] = array[i]; 
+            array[posMin] = array[i];
     }
     return array[posMin];
 }
@@ -61,4 +61,4 @@ double maxValue = MaxNum(myArray);
 Console.WriteLine($"max {maxValue}");
 double minValue = MinNum(myArray);
 Console.WriteLine($"min {minValue}");
-Console.WriteLine($"Разница между максимальным и минимальным элементом массива равна {maxValue - minValue}");
+Console.WriteLine($"Разница между максимальным и минимальным элементом массива равна {Math.Round((maxValue - minValue), 2)}");
